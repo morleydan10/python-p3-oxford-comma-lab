@@ -1,13 +1,8 @@
 def oxford_comma(items):
+    if len(items) > 1:
+        items[-1] = "and " + items[-1]
 
-    # new_list = ", ".join(items[:-1]) + ", and " + items[-1]
-
-    # print(new_list)
-
-
-    return " and ".join(items)
-
-
-
-# 
-# ", ".join(items[:-1]) + ", and " + items[-1]
+    if len(items) > 2:
+        return ', '.join(items)
+    else:
+        return ' '.join(items)
